@@ -1,0 +1,108 @@
+.ui-datepicker {
+  display: none;
+  width: 20rem;
+}
+
+
+.ui-datepicker-header a.ui-datepicker-prev {
+  left: 0;
+}
+
+.ui-datepicker-header a.ui-datepicker-next {
+  right: 0;
+}
+
+.ui-datepicker-calendar a {
+  color: #444444;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.ui-datepicker-calendar a:hover {
+  border: 1px solid #cccccc;
+}
+.ui-datepicker-calendar .ui-state-highlight {
+  border-color: #d33a47;
+  color: #d33a47;
+}
+.ui-datepicker-calendar .ui-state-active {
+  background: #d33a47;
+  color: #ffffff;
+}
+
+
+
+#container, #calendar {
+  display: inline-flex;
+}
+
+#grid {
+  display: flex;                      
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width:200px;
+  
+}
+.cell {
+  flex: 0 0 40%;
+  height: 50px;
+  margin-bottom: 5px;
+  border: 1px solid black;
+}
+
+.cell.st {
+  background: blue;
+}
+
+.cell.pm {
+  background: green;
+}
+
+.cell.dm {
+  background: yellow;
+}
+
+.cell.text span {
+  font-weight: bold;
+  padding: 5px;
+  display: flex;
+}
+
+
+#calendar .standUp.one a{
+  background: blue;
+}
+
+#calendar .planningMeeting.one a {
+  background: green;
+}
+
+#calendar .demoMeeting.one a {
+  background: yellow;
+}
+
+
+#calendar .standUp.planningMeeting.two a {
+background: -webkit-linear-gradient( -28deg, blue 0%, blue 60%, green 60%, green 60%)
+}
+
+#calendar .standUp.demoMeeting.two a {
+  background: -webkit-linear-gradient( -28deg, blue 0%, blue 60%, yellow 60%, yellow 60%)
+}
+
+#calendar .demoMeeting.planningMeeting.two a {
+  background: -webkit-linear-gradient( -28deg, yellow 0%, yellow 60%, green 60%, green 60%)
+}
+
+
+#calendar .three a {
+  background: -webkit-linear-gradient(-28deg, blue 33%,green 33%, green 66%, yellow 66%)
+}
+
+
