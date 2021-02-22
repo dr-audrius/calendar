@@ -42,77 +42,77 @@ $(document).ready(function () {
   });
 
 
-  // function addColorInCalendar(howManyEvent) {
+  function addColorInCalendar(howManyEvent) {
 
-  //   $(howManyEvent).each(function (index, value) {
+    $(howManyEvent).each(function (index, value) {
 
-  //     var $this = $(this);
-  //     var $classList = $this.attr('class').split(/\s+/);
+      var $this = $(this);
+      var $classList = $this.attr('class').split(/\s+/);
 
-  //     var classListColor = $.map($classList, function (eventClassValue, index) {
+      var classListColor = $.map($classList, function (eventClassValue, index) {
 
-  //       var colorValue;
+        var colorValue;
 
-  //       switch (eventClassValue) {
-  //         case "standUp":
-  //           colorValue = "blue";
-  //           break;
-  //         case "planningMeeting":
-  //           colorValue = "green";
-  //           break;
-  //         case "demoMeeting":
-  //           colorValue = "yellow";
-  //           break;
-  //         case "firstMonday":
-  //           colorValue = "red";
-  //           break;
-  //         default:
-  //           colorValue = "white";
-  //       }
+        switch (eventClassValue) {
+          case "standUp":
+            colorValue = "blue";
+            break;
+          case "planningMeeting":
+            colorValue = "green";
+            break;
+          case "demoMeeting":
+            colorValue = "yellow";
+            break;
+          case "firstMonday":
+            colorValue = "red";
+            break;
+          default:
+            colorValue = "white";
+        }
 
-  //       return {
-  //         Key: eventClassValue,
-  //         Value: colorValue
-  //       }
+        return {
+          Key: eventClassValue,
+          Value: colorValue
+        }
 
-  //     });
-
-
-  //     switch (howManyEvent) {
-  //       case ".two":
-  //         $this.children("a").css({
-  //           background: "-webkit-linear-gradient( -28deg, " + classListColor[1].Value + " 0%, " + classListColor[1].Value + " 60%, " + classListColor[2].Value + " 60%, " + classListColor[2].Value + " 60%)"
-  //         });
-  //         break;
-  //       case ".one":
-  //         $this.children("a").css({
-  //           background: classListColor[1].Value
-  //         });
-  //         break;
-  //       case ".three":
-  //         $this.children("a").css({
-  //           background: "-webkit-linear-gradient(-28deg, " + classListColor[1].Value + " 33%," + classListColor[2].Value + " 33%, " + classListColor[2].Value + " 66%, " + classListColor[3].Value + " 66%)"
-  //         });
-  //         break;
-  //       default:
-  //         colorValue = "white";
-  //     }
-
-  //   });
-
-  // }
-
-  // function todo() {
-  //   addColorInCalendar('.two');
-  //   addColorInCalendar('.one');
-  //   addColorInCalendar('.three');
-  // }
-
-  // todo();
+      });
 
 
-  // $(document).delegate("a[title='Next']", 'click', todo );
-  // $(document).delegate("a[title='Prev']", 'click', todo );
+      switch (howManyEvent) {
+        case ".two":
+          $this.children("a").css({
+            background: "-webkit-linear-gradient( -28deg, " + classListColor[1].Value + " 0%, " + classListColor[1].Value + " 60%, " + classListColor[2].Value + " 60%, " + classListColor[2].Value + " 60%)"
+          });
+          break;
+        case ".one":
+          $this.children("a").css({
+            background: classListColor[1].Value
+          });
+          break;
+        case ".three":
+          $this.children("a").css({
+            background: "-webkit-linear-gradient(-28deg, " + classListColor[1].Value + " 33%," + classListColor[2].Value + " 33%, " + classListColor[2].Value + " 66%, " + classListColor[3].Value + " 66%)"
+          });
+          break;
+        default:
+          colorValue = "white";
+      }
+
+    });
+
+  }
+
+  function todo() {
+    addColorInCalendar('.two');
+    addColorInCalendar('.one');
+    addColorInCalendar('.three');
+  }
+
+  todo();
+
+
+  $(document).delegate("a[title='Next']", 'click', todo );
+  $(document).delegate("a[title='Prev']", 'click', todo );
 
 });
 
